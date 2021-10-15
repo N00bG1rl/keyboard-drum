@@ -2,20 +2,47 @@ html {
   font-size: 10px;
   background: url("ColorfulPaintings.jpg") bottom center;
   background-size: cover;
+  overflow: hidden;
 }
 
-body,html {
+body {
+  position: relative;
+  min-height: 100vh;
+}
+
+body,
+html {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
 }
 
+h1 {
+  color: #fff;
+  font-size: 40px;
+  padding: 20px;
+  background: rgba(0,0,0,.6);
+  border: .4rem solid #1a53ff;
+  border-radius: .5rem;
+  width: 800px;
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, 0%);
+}
+
+.container {
+  position: relative;
+  height: 100vh;
+  min-height: 500px;
+  text-align: center;
+}
+
 .keys {
-  display: flex;
-  flex: 1;
-  min-height: 100vh;
-  align-items: center;
-  justify-content: center;
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-60%);
 }
 
 .key {
@@ -24,6 +51,7 @@ body,html {
   margin: 1rem;
   font-size: 1.5rem;
   padding: 1rem .5rem;
+  display: inline-block;
   transition: all .07s ease;
   width: 10rem;
   text-align: center;
